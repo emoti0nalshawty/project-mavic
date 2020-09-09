@@ -7,6 +7,7 @@
 @import 'global';
 @import 'fonts';
 @import 'libs';
+@import 'media';
 
 .header{
     position: fixed;
@@ -47,11 +48,17 @@
 }
 
 .menu{
+    &__btn{
+        display: none;
+    }
     &__list-item{
         display: inline-block;
         & + .menu__list-item{
             padding-left: 20px;
         }
+    }
+    &__list-phone{
+        display: none;
     }
 }
 
@@ -151,7 +158,7 @@
     cursor: pointer;
     outline: none;
     z-index: 5;
-    bottom: -45px;
+    bottom: -48px;
     svg{
         stroke: #000;
     }

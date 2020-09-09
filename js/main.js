@@ -19,6 +19,17 @@ $(function(){
         scrollHorizontally: true,
         scrollingSpeed: 900,
         sectionSelector: '.page-section',
-        anchors:['slide1','slide2','slide3','slide4','slide5','slide6']
-	});
+        anchors:['slide1','slide2','slide3','slide4','slide5','slide6'],
+        scrollOverflow: true
+    });
+    
+    $('.menu__btn').on('click', function(){
+        $('.menu__btn').toggleClass('menu__btn--active');
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+
+    $('.menu__list-link').on('click', function(){
+        $('.menu__btn').removeClass('menu__btn--active');
+        $('.menu__list').removeClass('menu__list--active');
+    });
 })
